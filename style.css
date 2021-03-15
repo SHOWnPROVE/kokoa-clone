@@ -121,6 +121,8 @@ main {
   justify-content: flex-start;
 }
 .left__DM .inside .fa-file-image {
+  padding-left: 2px;
+
   margin-right: 10px;
 }
 .menusize {
