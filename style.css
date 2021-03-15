@@ -120,6 +120,9 @@ main {
   display: flex;
   justify-content: flex-start;
 }
+.left__DM .inside .fa-file-image {
+  margin-right: 10px;
+}
 .menusize {
   width: 30px;
   display: flex;
