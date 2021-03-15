@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slack clone Coding</title>
+  </head>
+
+  <body>
+    <div class="topbar black">
+      <div class="topbar__menu black">
+        <div>
+          <i class="fas fa-bars hover"></i>
+        </div>
+        <div class="topbar__menu__right black">
+          <i class="fas fa-arrow-left hover"></i>
+          <i class="fas fa-arrow-right hover"></i>
+          <i class="fas fa-history hover"></i>
+        </div>
+      </div>
+      <div class="topbar__search black">
+        <input type="text" placeholder="'채널이름' 검색" />
+        <i class="far fa-question-circle hover"></i>
+      </div>
+
+      <div class="topbar__windowcontrol black">
+        <i class="fas fa-window-minimize hover"></i>
+        <i class="fas fa-window-maximize hover"></i>
+        <i class="fas fa-times hover"></i>
+      </div>
+    </div>
+
+    <main>
+      <div class="left">
+        <div class="left__channel-name">
+          <div class="title">
+            <span>워크스페이스이름</span>
+            <i class="fas fa-chevron-down hover"></i>
+          </div>
+          <i class="far fa-edit hover"></i>
+        </div>
+        <div class="left__menu">
+          <div>
+            <div class="menusize"><i class="far fa-comment-dots"></i></div>
+            <div><span>스레드</span></div>
+          </div>
+          <div>
+            <div class="menusize"><i class="far fa-file-alt"></i></div>
+            <div><span>초안</span></div>
+          </div>
+          <div>
+            <div class="menusize"><i class="fas fa-at"></i></div>
+            <div><span>멘션 및 반응</span></div>
+          </div>
+          <div>
+            <div class="menusize"><i class="far fa-bookmark"></i></div>
+            <div><span>저장된 항목</span></div>
+          </div>
+          <div>
+            <div class="menusize"><i class="fas fa-ellipsis-v"></i></div>
+            <div><span>더 보기</span></div>
+          </div>
+        </div>
+        <div class="left__channel-list">
+          <div class="title">
+            <i class="fas fa-sort-down space hover"></i>
+            <span>채널</span>
+          </div>
+          <div>
+            <div class="inside"><span># 채널이름</span></div>
+            <div class="inside"><span># 채널이름</span></div>
+            <div class="inside"><span># 채널이름</span></div>
+            <div class="inside"><span># 채널이름</span></div>
+            <div class="inside"><span># 채널이름</span></div>
+            <div class="inside">
+              <i class="fas fa-plus hover"></i>
+              <span>채널 추가</span>
+            </div>
+          </div>
+        </div>
+        <div class="left__DM">
+          <div class="title">
+            <i class="fas fa-sort-down hover"></i><span>다이렉트 메시지</span>
+          </div>
+          <div class="inside">
+            <i class="far fa-file-image"></i><span>User Name</span>
+          </div>
+          <div class="inside">
+            <i class="fas fa-plus hover"></i>
+            <span>팀원 추가</span>
+          </div>
+        </div>
+        <div class="left__app">
+          <div class="title">
+            <i class="fas fa-sort-down hover"></i><span>앱</span>
+          </div>
+          <div class="inside">
+            <i class="fas fa-plus hover"></i>
+            <span>앱 추가</span>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div class="center__channel-info">
+          <div class="center__channel-info__left">
+            <div class="center__channel-info__left__title">
+              <span>#채널이름</span> <i class="far fa-star"></i>
+            </div>
+            <div class="center__channel-info__left__detail">
+              <div class="center__channel-info__left__fixed">
+                <i class="fas fa-thumbtack hover"></i>
+                <span> 2</span>
+              </div>
+              <div class="center__channel-info__left__subject">
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="채널의 주제가 표시됩니다."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="center__channel-info__right">
+            <div class="center__channel-info__right__part">
+              <div class="center__channel-info__right__part-img">
+                <div class="squ"></div>
+                <div class="squ"></div>
+                <div class="squ"></div>
+              </div>
+              <div class="center__channel-info__right__part-count">3,819</div>
+            </div>
+            <div class="center__channel-info__right__interface">
+              <i class="fas fa-user-plus hover"></i>
+              <i class="fas fa-info hover"></i>
+            </div>
+          </div>
+        </div>
+        <div class="center__chat">
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라.</span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라.</span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라.</span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat slide-top">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>메세지가 입력됩니다. 블라블라. </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center__send">
+          <!--i can not make icon or img btn-->
+          <div class="center__send__enter">
+            <input type="text" placeholder="#채널이름에(게) 메시지 보내기" />
+          </div>
+          <div>
+            <i class="fas fa-bolt hover"></i>
+            <i class="fas fa-bold hover"></i>
+            <i class="fas fa-italic hover"></i>
+            <i class="fas fa-strikethrough hover"></i>
+            <i class="fas fa-underline hover"></i>
+            <i class="fas fa-link hover"></i>
+            <i class="fas fa-list-ol hover"></i>
+            <i class="fas fa-list-ul hover"></i>
+            <i class="fas fa-align-justify hover"></i>
+            <i class="fas fa-align-left hover"></i>
+            <i class="fas fa-align-center hover"></i>
+            <i class="fas fa-align-right hover"></i>
+            <i class="fas fa-ellipsis-h hover"></i>
+            <i class="fas fa-font hover"></i>
+            <i class="fas fa-at hover"></i>
+            <i class="far fa-smile hover"></i>
+            <i class="fas fa-paperclip hover"></i>
+            <i class="fas fa-paper-plane hover"></i>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right__thread">
+          <div>
+            <div class="right__thread__title"><span>스레드</span></div>
+            <div><span>#채널이름</span></div>
+          </div>
+          <i class="fas fa-times hover"></i>
+        </div>
+        <div class="right__content">
+          <div class="center__chat__chat">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>블라블라.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right__reply">
+          <div class="center__chat__chat">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>블라블라. </span>
+              </div>
+            </div>
+          </div>
+          <div class="center__chat__chat">
+            <div class="center__chat__chatterimg"></div>
+            <div>
+              <div class="center__chat__info">
+                <div class="center__chat__chattername">
+                  <span>닉네임</span>
+                </div>
+                <div class="center__chat__chattime">
+                  <span>채팅시간</span>
+                </div>
+              </div>
+              <div class="center__chat__message">
+                <span>블라블라. </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right__send">
+          <div class="right__send__enter">
+            <input type="text" placeholder="#채널이름에(게) 메시지 보내기" />
+          </div>
+          <div>
+            <i class="fas fa-bolt hover"></i>
+            <i class="fas fa-bold hover"></i>
+            <i class="fas fa-italic hover"></i>
+            <i class="fas fa-strikethrough hover"></i>
+            <i class="fas fa-ellipsis-h hover"></i>
+            <i class="fas fa-font hover"></i>
+            <i class="fas fa-at hover"></i>
+            <i class="far fa-smile hover"></i>
+            <i class="fas fa-paperclip hover"></i>
+            <i class="fas fa-paper-plane hover"></i>
+          </div>
+        </div>
+        <div class="transport">
+          <input type="checkbox" name="transport" />
+          <span>#채널이름(으)로도 전송</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
