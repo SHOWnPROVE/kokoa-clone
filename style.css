@@ -87,7 +87,8 @@ main {
 
 /*left*/
 @media screen and (max-width: 1200px) {
-  .left {
+  .left,
+  .topbar__search {
     display: none;
   }
 }
@@ -251,8 +252,7 @@ main {
 @media screen and (max-width: 800px) {
   .right,
   .center__channel-info__right__part,
-  .center__send,
-  .topbar__search {
+  .center__send {
     display: none;
   }
 }
