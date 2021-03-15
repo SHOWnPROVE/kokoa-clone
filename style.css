@@ -148,7 +148,7 @@ main {
   padding-left: 20px;
 }
 .center__channel-info__left__subject input {
-  width: 200px;
+  width: 100px;
 }
 .center__channel-info__right {
   display: flex;
@@ -248,8 +248,11 @@ main {
   background-color: black;
 }
 /*right*/
-@media screen and (max-width: 700px) {
-  .right {
+@media screen and (max-width: 800px) {
+  .right,
+  .center__channel-info__right__part,
+  .center__send,
+  .topbar__search {
     display: none;
   }
 }
